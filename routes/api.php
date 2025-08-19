@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('survey-responses')->group(function () {
+Route::prefix('external/survey-responses')->group(function () {
 
     Route::post('/system-a', [SurveyAnswerController::class, 'systemA']);
 
