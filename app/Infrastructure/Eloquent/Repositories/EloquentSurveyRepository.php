@@ -8,9 +8,9 @@ use Illuminate\Support\Collection;
 
 class EloquentSurveyRepository implements SurveyRepositoryInterface
 {
-    public function find(int $id): ?Survey
+    public function find(string $title): ?Survey
     {
-        return Survey::find($id);
+        return Survey::find($title);
     }
 
     public function list(): Collection

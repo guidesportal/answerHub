@@ -10,12 +10,12 @@ return new class extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('survey_id');
+            $table->string('survey');
             $table->text('question_text');
             $table->enum('type', ['text', 'multiple_choice', 'number'])->default('text');
             $table->timestamps();
 
-            $table->foreign('survey_id')->references('id')->on('surveys')->onDelete('cascade');
+            $table->foreign('survey')->references('title')->on('surveys')->onDelete('cascade');
         });
     }
 

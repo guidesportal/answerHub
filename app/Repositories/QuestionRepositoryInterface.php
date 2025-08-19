@@ -14,4 +14,5 @@ interface QuestionRepositoryInterface
      */
     public function list(): Collection;
 
+    public function firstBySurveyAndQuestionId(string $survey, int $questionId): ?Question;
 }
