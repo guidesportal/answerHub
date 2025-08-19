@@ -12,6 +12,6 @@ interface SurveyRepositoryInterface
     /**
      * @return Collection<Survey>
      */
-    public function list(): Collection;
+    public function list(?array $with = []): Collection;
 
 }

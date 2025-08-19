@@ -13,8 +13,8 @@ class EloquentSurveyRepository implements SurveyRepositoryInterface
         return Survey::find($title);
     }
 
-    public function list(): Collection
+    public function list(?array $with = []): Collection
     {
-        return collect(Survey::query()->where('is_active', true)->get());
+        return collect(Survey::with($with)->where('is_active', true)->get());
     }
 }

@@ -12,7 +12,7 @@ interface AnswerRepositoryInterface
     /**
      * @return Collection<Answer>
      */
-    public function list(): Collection;
+    public function list(?array $with = []): Collection;
 
     public function firstBySurveyAndQuestionId(string $survey, int $questionId): ?Answer;
 

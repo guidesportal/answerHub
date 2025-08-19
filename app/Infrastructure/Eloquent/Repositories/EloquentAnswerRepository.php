@@ -13,9 +13,9 @@ class EloquentAnswerRepository implements AnswerRepositoryInterface
         return Answer::find($id);
     }
 
-    public function list(): Collection
+    public function list(?array $with = []): Collection
     {
-        return collect(Answer::all());
+        return collect(Answer::with($with)->get());
     }
 
     public function findBySurveyAndQuestionId(string $survey, int $questionId): Collection
