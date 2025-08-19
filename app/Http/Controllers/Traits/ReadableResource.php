@@ -11,7 +11,7 @@ trait ReadableResource
     {
         $eagerLoads = $request->query('with');
         if (!empty($eagerLoads)) {
-            $eagerLoads = is_array($eagerLoads)? $eagerLoads: [$eagerLoads];
+            $eagerLoads = is_array($eagerLoads) ? $eagerLoads : [$eagerLoads];
         }
         Log::debug(
             "Requesting " . $this->repository::class . " list",

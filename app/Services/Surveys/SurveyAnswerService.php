@@ -16,8 +16,7 @@ class SurveyAnswerService implements SurveyAnswerServiceInterface
         private SurveyRepositoryInterface   $surveyRepo,
         private QuestionRepositoryInterface $questionRepo,
         private AnswerRepositoryInterface   $answerRepo
-    )
-    {
+    ) {
     }
 
     /*
