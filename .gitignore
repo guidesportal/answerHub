@@ -193,3 +193,4 @@ Thumbs.db
 /.composer/cache/repo/https---repo.packagist.org/provider-webmozart~assert.json
 /.composer/cache/.htaccess
 /.composer/.htaccess
+/.config/*
