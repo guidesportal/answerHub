@@ -32,7 +32,9 @@ Route::prefix('survey-responses')->group(function () {
 
 });
 
-
+/**
+ * Rutas CRUD para lectura
+ */
 Route::apiResource('users', UserController::class);
 Route::apiResource('surveys', SurveyController::class);
 Route::apiResource('questions', QuestionController::class);
