@@ -18,7 +18,7 @@ if [ ! -f /home/app/.migrated ]; then
     php artisan migrate:fresh --force && touch /home/app/.migrated
 fi
 if [ ! -f /home/app/.seeded ]; then
-    php artisan db:seed --class=CreateTestData --force && touch /home/app/.seeded
+    php artisan db:seed --force && touch /home/app/.seeded
 fi
 # first arg is `-f` or `--some-option`
 if [ "${1#-}" != "$1" ]; then

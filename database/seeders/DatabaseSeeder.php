@@ -7,7 +7,7 @@ use App\Models\Survey;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class CreateTestData extends Seeder
+class DatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
