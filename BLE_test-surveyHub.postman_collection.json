@@ -828,7 +828,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "request_id,survey,email,question_id,answer_time\n1,satisfaction,\"jperez@shub.com\",1,\"2025/08/17 12:05\"\n1,satisfaction,\"jperez@shub.com\",1,\"2025/08/17 12:06\"",
+							"raw": "request_id,survey,email,question_id,answer_time,answer\n1,satisfaction,\"jperez@shub.com\",1,\"2025/08/17 12:05\"4\n1,satisfaction,\"jperez@shub.com\",1,\"2025/08/17 12:06\"5",
 							"options": {
 								"raw": {
 									"language": "text"
