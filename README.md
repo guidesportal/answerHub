@@ -14,6 +14,8 @@ Tenéis los samples de los body para esas requests en **storage/app/samples**. L
 - método **SystemA()** -> **storage/app/samples/SystemA-sampleB.json** (400 Bad request)
 - método  **SystemC()** -> **storage/app/samples/SystemC-sampleA.json** (solamente hay un sample, 200 OK)
 
+Tenéis disponible la colección **Postman** del proyecto para que podáis consultar los datos, y testear manualmente los endpoint en la raíz del repositorio.
+
 Se puede usar cualquier herramienta, no hay limitaciones en este sentido.
 **Podeis añadir tests de feature si sobra tiempo, no es obligatorio**.
 Esta prueba en concreto está pensada para que dure alrededor de una hora u hora y media, así que de todas las formas posibles,
@@ -24,18 +26,18 @@ puedes añadirlo al archivo NOTES.md especificando como lo harías y porqué.
  - Cambiar a la rama testBranch y hacer rebase en main
  - Crear el archivo NOTES.md para poder escribir cualquier aclaración de tu parte
  - Hacer los commits necesarios en el código
-### Prerequisitos
+### Requisitos previos
  - Docker actualizado (probado con 4.42.1)
  - Postman (Opcional, para poder realizar pruebas manuales)
 
 ### Instalación / Build
-El repositorio está preparado para levantar la infrastructura local solamente con docker ejecutando el siguiente comando:
+El repositorio está preparado para levantar la infraestructura local solamente con docker ejecutando el siguiente comando:
 ```shell
 $ docker compose up -d
 ```
 
 ### Otros comandos útiles
-Si tenéis problemas con las migraciones, podeis lanzar de forma manual:
+Si tenéis problemas con las migraciones, podéis lanzar de forma manual:
 Reiniciar los servicios de compose:
 ```shell
 $ docker compose down && docker compose up -d
