@@ -1,0 +1,886 @@
+{
+	"info": {
+		"_postman_id": "9e11c471-cf02-408d-978c-55b39ac64884",
+		"name": "BLE_test-surveyHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40899059"
+	},
+	"item": [
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{HOST}}/api/users?with=answers",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "with",
+									"value": "answers"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}/api/users?with=answers",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "with",
+											"value": "answers"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12RC1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Aug 2025 07:07:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Juan Pérez\",\n        \"email\": \"jperez@shub.com\",\n        \"created_at\": \"2025-08-19T22:07:16.000000Z\",\n        \"updated_at\": \"2025-08-19T22:07:16.000000Z\",\n        \"answers\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{HOST}}/api/users/{{user_id}}",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}/api/users/{{user_id}}",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"{{user_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12RC1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Aug 2025 07:08:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Juan Pérez\",\n    \"email\": \"jperez@shub.com\",\n    \"created_at\": \"2025-08-19T22:07:16.000000Z\",\n    \"updated_at\": \"2025-08-19T22:07:16.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Surveys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{HOST}}/api/surveys?with=questions",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"surveys"
+							],
+							"query": [
+								{
+									"key": "with",
+									"value": "questions"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}/api/surveys?with=questions",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"surveys"
+									],
+									"query": [
+										{
+											"key": "with",
+											"value": "questions"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12RC1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Aug 2025 07:08:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"title\": \"satisfaction\",\n        \"description\": \"Test Survey active\",\n        \"is_active\": true,\n        \"created_at\": \"2025-08-19T22:07:16.000000Z\",\n        \"updated_at\": \"2025-08-19T22:07:16.000000Z\",\n        \"questions\": [\n            {\n                \"id\": 1,\n                \"survey\": \"satisfaction\",\n                \"question_text\": \"Your satisfaction between 0-5?\",\n                \"type\": \"text\",\n                \"created_at\": \"2025-08-19T22:07:16.000000Z\",\n                \"updated_at\": \"2025-08-19T22:07:16.000000Z\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Survey",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{HOST}}/api/surveys/{{survey_id}}",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"surveys",
+								"{{survey_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 (not active)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}/api/surveys/{{survey_id}}",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"surveys",
+										"{{survey_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12RC1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Aug 2025 07:09:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"old_satisfaction\",\n    \"description\": \"Test Survey inactive\",\n    \"is_active\": false,\n    \"created_at\": \"2025-08-19T22:07:16.000000Z\",\n    \"updated_at\": \"2025-08-19T22:07:16.000000Z\"\n}"
+						},
+						{
+							"name": "200 (active)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}/api/surveys/{{survey_id}}",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"surveys",
+										"{{survey_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12RC1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Aug 2025 07:10:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"satisfaction\",\n    \"description\": \"Test Survey active\",\n    \"is_active\": true,\n    \"created_at\": \"2025-08-19T22:07:16.000000Z\",\n    \"updated_at\": \"2025-08-19T22:07:16.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Questions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{HOST}}/api/questions?with=answers",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"questions"
+							],
+							"query": [
+								{
+									"key": "with",
+									"value": "answers"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}/api/questions?with=answers",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"questions"
+									],
+									"query": [
+										{
+											"key": "with",
+											"value": "answers"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12RC1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Aug 2025 07:10:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"survey\": \"satisfaction\",\n        \"question_text\": \"Your satisfaction between 0-5?\",\n        \"type\": \"text\",\n        \"created_at\": \"2025-08-19T22:07:16.000000Z\",\n        \"updated_at\": \"2025-08-19T22:07:16.000000Z\",\n        \"answers\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Question",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{HOST}}/api/questions/{{question_id}}",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"questions",
+								"{{question_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}/api/questions/{{question_id}}",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"questions",
+										"{{question_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12RC1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Aug 2025 07:10:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"survey\": \"satisfaction\",\n    \"question_text\": \"Your satisfaction between 0-5?\",\n    \"type\": \"text\",\n    \"created_at\": \"2025-08-19T22:07:16.000000Z\",\n    \"updated_at\": \"2025-08-19T22:07:16.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Answers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{HOST}}/api/answers",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"answers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "empty",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}/api/answers",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"answers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12RC1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Aug 2025 07:11:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				},
+				{
+					"name": "Answer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{HOST}}/api/answers/{{answer_id}}",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"answers",
+								"{{answer_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "external",
+			"item": [
+				{
+					"name": "SystemA-SampleA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"response_id\": 101,\n    \"survey\": \"satisfaction\",\n    \"qid\": \"1\",\n    \"user_name\": \"Juan Pérez\",\n    \"email\": \"jperez@shub.com\",\n    \"score\": 4,\n    \"submitted_at\": \"2025-08-17T12:01:00Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{HOST}}/api/external/survey-responses/system-a",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"survey-responses",
+								"system-a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SystemA-SampleB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"response_id\": 102,\n    \"survey\": \"satisfaction\",\n    \"qid\": \"1\",\n    \"user_name\": \"Juan Pérez\",\n    \"email\": \"jperez@shub.com\",\n    \"score\": 4,\n    \"submitted_at\": \"2025-08-17T12:01:30+03:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{HOST}}/api/external/survey-responses/system-a",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"survey-responses",
+								"system-a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SystemB-SampleA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"survey_code\": \"satisfaction\",\n    \"external_qid\": \"1\",\n    \"participant\": {\n        \"first\": \"Juan\",\n        \"last\": \"Pérez\",\n        \"email\": \"jperez@shub.com\"\n    },\n    \"rating\": {\n        \"value\": 5\n    },\n    \"created_at\": 1692270000\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{HOST}}/api/external/survey-responses/system-b",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"survey-responses",
+								"system-b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SystemB-SampleB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"survey_code\": \"old_satisfaction\",\n    \"participant\": {\n        \"first\": \"Juan\",\n        \"last\": \"Pérez\",\n        \"email\": \"jperez@shub.com\"\n    },\n    \"rating\": {\n        \"value\": 5\n    },\n    \"created_at\": 1692270000\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{HOST}}/api/external/survey-responses/system-b",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"survey-responses",
+								"system-b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SystemC-SampleA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"res_999\",\n    \"survey\": {\n        \"surveyId\": \"satisfaction\",\n        \"questionId\": \"1\"\n    },\n    \"email_recipient\": \"jperez\",\n    \"email_host\": \"shub.com\",\n    \"answer\": \"3\",\n    \"submitted\": \"17/08/2025 12:03\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{HOST}}/api/external/survey-responses/system-c",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"survey-responses",
+								"system-c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SystemD-SampleA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<surveyResponse>\n    <id>abc-123</id>\n    <survey>satisfaction</survey>\n    <question>satisfaction</question>\n    <participant>jperez@shub.com</participant>\n    <score>2</score>\n    <date>2025-08-17 12:04:00</date>\n</surveyResponse>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{HOST}}/api/external/survey-responses/system-d",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"survey-responses",
+								"system-d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SystemE-SampleA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "request_id,survey,email,question_id,answer_time\n1,satisfaction,\"jperez@shub.com\",1,\"2025/08/17 12:05\"\n1,satisfaction,\"jperez@shub.com\",1,\"2025/08/17 12:06\"",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{HOST}}/api/external/survey-responses/system-e",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"survey-responses",
+								"system-e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "localhost:8000",
+			"type": "string"
+		}
+	]
+}
