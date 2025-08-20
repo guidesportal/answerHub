@@ -11,15 +11,10 @@ COPY . .
 COPY infra/php/sudoers.d /etc/sudoers.d
 COPY infra/php/entrypoint.sh /entrypoint
 RUN chmod 755 /entrypoint
+ENTRYPOINT ["/entrypoint"]
 RUN adduser -D -h /home/app appuser && adduser appuser wheel && chmod 440 /etc/sudoers.d/*
 RUN chown appuser -R /home/app
 USER appuser
-RUN composer install --no-interaction --prefer-dist
-USER root
-RUN ln -s /home/app/vendor/bin/php-cs-fixer /usr/sbin/php-cs-fixer
-ENTRYPOINT ["/entrypoint"]
-USER appuser
-RUN php artisan config:clear
 
 EXPOSE 8000
 EXPOSE 8001
